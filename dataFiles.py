@@ -228,3 +228,43 @@ class Person:
 p = Person()
 p.say_hi()
 print(p)
+
+
+x = lambda a : a + 10
+print(x(5))
+
+x = lambda a, b : a * b
+print(x(5, 6))
+
+
+x = lambda a, b, c : a + b + c
+print(x(5, 6, 2))
+
+
+cars = ["Ford", "Volvo", "BMW"]
+x = cars[0]
+print(x)
+
+x = len(cars)
+print(x)
+
+
+class PersonNew:
+  def __init__(self, fname, lname):
+    self.firstname = fname
+    self.lastname = lname
+
+  def printname(self):
+    print(self.firstname, self.lastname)
+
+
+a = PersonNew("Gayani" , "udawatta")
+a.printname()
+
+
+class Student(Person):
+  def __init__(self, fname, lname):
+    Person.__init__(self, fname, lname)
+
+x = Student("Mike", "Olsen")
+x.printname()
